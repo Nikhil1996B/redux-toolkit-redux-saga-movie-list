@@ -6,6 +6,7 @@ import App from "./App";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
+window.store = store;
 root.render(
   <Provider store={store}>
     <App />

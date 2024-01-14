@@ -5,8 +5,8 @@ import { getMovies } from "../redux/feature/movieSlice";
 
 const Search = () => {
   const [movieName, setMovieName] = useState("spider");
+  const {movieList: {Error: error}} = useSelector(())
   const dispatch = useDispatch();
-  const classes = useStyles();
   useEffect(() => {
     dispatch(getMovies(movieName));
   }, [movieName]);
@@ -44,6 +44,7 @@ const Search = () => {
           sx={{ m: 1, width: "55ch" }}
           onChange={(e) => setMovieName(e.target.value)}
         />
+        {error}
       </Box>
     </>
   );

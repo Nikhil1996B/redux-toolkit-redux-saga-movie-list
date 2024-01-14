@@ -1,12 +1,11 @@
 import React from "react";
 import Search from "../components/Search";
 
-export default Home = () => {
+const Home = () => {
   return (
     <>
-      {/* Search */}
       <Search />
-      {/* Movie list */}
     </>
   );
 };
+export default Home;
